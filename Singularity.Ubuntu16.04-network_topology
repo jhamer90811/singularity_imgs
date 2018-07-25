@@ -57,18 +57,6 @@ Version 7/25/18
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
-    #Boost
-    wget -O boost_1_55_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
-    tar xzvf boost_1_55_0.tar.gz
-    rm boost_1_55_0.tar.gz
-    cd boost_1_55_0/
-    apt-get -y install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
-    ./bootstrap.sh --prefix=/usr/local
-    ./b2
-    ./b2 install
-
-
-
     # pip basics
     pip3 --no-cache-dir --disable-pip-version-check install --upgrade setuptools
     pip3 --no-cache-dir --disable-pip-version-check install numpy wheel zmq six pygments pyyaml cython gputil psutil humanize h5py tqdm scipy seaborn tables google cmake
