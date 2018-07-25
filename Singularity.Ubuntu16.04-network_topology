@@ -62,10 +62,10 @@ Version 7/25/18
     tar xzvf boost_1_55_0.tar.gz
     rm boost_1_55_0.tar.gz
     cd boost_1_55_0/
-    sudo apt-get -y install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
+    apt-get -y install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
     ./bootstrap.sh --prefix=/usr/local
     ./b2
-    sudo ./b2 install
+    ./b2 install
 
 
 
