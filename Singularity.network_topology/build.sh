@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BOOST_MAJ_VERSION=1
-BOOST_MIN_VERSION=55
+BOOST_MIN_VERSION=67
 BOOST_REL_VERSION=0
 
 bootstrap_options=""
