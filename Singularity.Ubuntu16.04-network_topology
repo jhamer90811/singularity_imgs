@@ -67,7 +67,7 @@ Version 7/25/18
 
     # install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
-    tar -xf library-latest.zip
+    unzip library-latest.zip
     rm library-latest.zip
     rm version.2.2.0.txt
     tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
