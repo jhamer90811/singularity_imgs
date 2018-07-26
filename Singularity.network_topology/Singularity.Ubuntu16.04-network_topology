@@ -82,8 +82,6 @@ Version 7/25/18
     apt-get -y remove  boost*
     apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-dev
 
-    pkg-config --cflags python3
-
     chmod +x $ROOTSYS/tmp/build.sh
     chmod +x $ROOTSYS/tmp/project-config.jam
     mkdir $ROOTSYS/tmp/boost
