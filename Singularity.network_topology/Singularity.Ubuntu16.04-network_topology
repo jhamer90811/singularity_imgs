@@ -41,8 +41,7 @@ Version 7/25/18
     export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
-    cat /tmp/project-config.jam
-    cat /tmp/build.sh
+    chmod 755 /root
 
     # apt-get
     apt-get -y update
