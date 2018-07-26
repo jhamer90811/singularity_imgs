@@ -24,6 +24,8 @@ using python
     : #condition
 ;
 
+using mpi ;
+using zlib ;
 
 # List of --with-<library> and --without-<library>
 # options. If left empty, all libraries will be built.
