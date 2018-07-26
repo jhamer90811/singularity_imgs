@@ -61,9 +61,9 @@ Version 7/25/18
     rm root_v6.08.06.Linux-ubuntu16-x86_64-gcc5.4.tar.gz
     mv root /usr/local/root
     export ROOTSYS=/usr/local/root
-    mkdir ROOTSYS/tmp
-    mv /tmp/build.sh ROOTSYS/tmp/build.sh
-    mv /tmp/project-config.jam ROOTSYS/tmp/project-config.jam
+    mkdir $ROOTSYS/tmp
+    mv /tmp/build.sh $ROOTSYS/tmp/build.sh
+    mv /tmp/project-config.jam $ROOTSYS/tmp/project-config.jam
     export PATH=${ROOTSYS}/bin:${PATH}
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
@@ -85,8 +85,8 @@ Version 7/25/18
     apt-get -y remove  boost*
     # apt-get -y install icu libicu libicu-devel bzip2-devel texinfo zlib zlib-devel zlib-static openmpi openmpi-devel mpich-devel
 
-    mkdir ROOTSYS/tmp/boost
-    ROOTSYS/tmp/build.sh
+    mkdir $ROOTSYS/tmp/boost
+    $ROOTSYS/tmp/build.sh
 
 
 
