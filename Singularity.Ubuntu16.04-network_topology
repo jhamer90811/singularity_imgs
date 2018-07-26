@@ -69,9 +69,9 @@ Version 7/25/18
 
     wget -O boost_1_55_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
     mkdir boost_1_55_0
-    tar xzvf boost_1_55_0.tar.gz -C boost_1_55_0
+    tar xzvf boost_1_55_0.tar.gz
     rm boost_1_55_0.tar.gz
-    #cd boost_1_55_0/
+    cd boost_1_55_0
     apt-get -y update
     apt-get -y install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
     ./bootstrap.sh --prefix=/usr/local
