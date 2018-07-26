@@ -60,8 +60,8 @@ Version 7/25/18
     mv root /usr/local/root
     export ROOTSYS=/usr/local/root
     mkdir $ROOTSYS/tmp
-    mv /tmp/build.sh $ROOTSYS/tmp/build.sh
-    mv /tmp/project-config.jam $ROOTSYS/tmp/project-config.jam
+    #mv /tmp/build.sh $ROOTSYS/tmp/build.sh
+    #mv /tmp/project-config.jam $ROOTSYS/tmp/project-config.jam
     export PATH=${ROOTSYS}/bin:${PATH}
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
@@ -82,10 +82,10 @@ Version 7/25/18
     apt-get -y remove  boost*
     apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-dev
 
-    chmod +x $ROOTSYS/tmp/build.sh
-    chmod +x $ROOTSYS/tmp/project-config.jam
-    mkdir $ROOTSYS/tmp/boost
-    $ROOTSYS/tmp/build.sh
+    chmod +x /tmp/build.sh
+    chmod +x /tmp/project-config.jam
+    mkdir /tmp/boost
+    /tmp/build.sh
 
     install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
