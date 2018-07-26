@@ -72,8 +72,8 @@ Version 7/25/18
     rm version.2.2.0.txt
     tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
     rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    mv 2018-06-14-13-32-49_GUDHI_2.2.0 $PYTHONPATH/library-gudhi_library_2
-    cd $PYTHONPATH/library-gudhi_library_2
+    mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
+    cd library-gudhi_library_2
     mkdir build
     cd build
     cmake -DPython_ADDITIONAL_VERSIONS=3 ..
