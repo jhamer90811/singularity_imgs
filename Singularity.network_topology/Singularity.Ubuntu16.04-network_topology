@@ -20,8 +20,8 @@ https://github.com/DeepLearnPhysics/larcv2-singularity
     -All packages are installed using pip3 for compatibility with Python3.
 
 %files
-project-config.jam /tmp/project-config.jam
-build.sh /tmp/build.sh
+project-config.jam /usr/local/root/tmp/project-config.jam
+build.sh /usr/local/root/tmp/build.sh
 
 %labels
 Maintainer jhamer90811
@@ -41,8 +41,8 @@ Version 7/25/18
     export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
-    chmod +x /tmp/build.sh
-    chmod +x /tmp/project-config.jam
+    #chmod +x /tmp/build.sh
+    #chmod +x /tmp/project-config.jam
 
     # apt-get
     apt-get -y update
@@ -73,6 +73,7 @@ Version 7/25/18
     pip3 --no-cache-dir --disable-pip-version-check install 'ipython<6.0'
     pip3 --no-cache-dir --disable-pip-version-check install jupyter notebook
 
+    ls .
     # install boost
 
     apt-get -y update
@@ -81,8 +82,8 @@ Version 7/25/18
     apt-get -y remove  boost*
     # apt-get -y install icu libicu libicu-devel bzip2-devel texinfo zlib zlib-devel zlib-static openmpi openmpi-devel mpich-devel
 
-    mkdir /tmp/boost
-    /tmp/build.sh
+    mkdir /usr/local/root/tmp/boost
+    /usr/local/root/tmp/build.sh
 
 
 

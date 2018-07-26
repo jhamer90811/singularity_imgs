@@ -26,20 +26,20 @@ dl_url="${sf_url}${BOOST_MAJ_VERSION}.${BOOST_MIN_VERSION}.${BOOST_REL_VERSION}/
 tmp_dir="/tmp/boost/boost_${BOOST_MAJ_VERSION}_${BOOST_MIN_VERSION}_${BOOST_REL_VERSION}/"
 
 
-rm /tmp/boost/stdout.log 2>/dev/null
-rm /tmp/boost/stderr.log 2>/dev/null
+rm /usr/local/root/tmp/boost/stdout.log 2>/dev/null
+rm /usr/local/root/tmp/boost/stderr.log 2>/dev/null
 
 # Overwrite the boost configuration file,
 # because python paths are not filled in otherwise
-cd /tmp/boost                           >/tmp/boost/stdout.log  2>/tmp/boost/stderr.log && \
-echo "Starting Download"                                                                && \
-wget -c $dl_url                        >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-echo "Starting Extracting"                                                              && \
-tar -xvjf download                     >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-cd $tmp_dir                            >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-echo "Starting Bootstrap"                                                               && \
-./bootstrap.sh $bootstrap_options      >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-cp -f /tmp/project-config.jam $tmp_dir >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-echo "Starting Compilation"                                                             && \
-./b2 install $b2_options               >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log && \
-echo "All done"                        >>/tmp/boost/stdout.log 2>>/tmp/boost/stderr.log
+cd /usr/local/root/tmp/boost            && \
+echo "Starting Download"                && \
+wget -c $dl_url                         && \
+echo "Starting Extracting"              && \
+tar -xvjf download                      && \
+cd $tmp_dir                             && \
+echo "Starting Bootstrap"               && \
+./bootstrap.sh $bootstrap_options       && \
+cp -f /usr/local/root/tmp/project-config.jam $tmp_dir  &&\
+echo "Starting Compilation"                            &&\
+./b2 install $b2_options                               &&\
+echo "All done"
