@@ -67,9 +67,12 @@ Version 7/25/18
 
     # install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
-    gzip library-gudhi_library_2.2.0.zip
-    rm library-gudhi_library_2.2.0.zip
-    mv library-gudhi_library_2 $PYTHONPATH/library-gudhi_library_2
+    tar -xf library-latest.zip
+    rm library-latest.zip
+    rm version.2.2.0.txt
+    tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    mv 2018-06-14-13-32-49_GUDHI_2.2.0 $PYTHONPATH/library-gudhi_library_2
     cd $PYTHONPATH/library-gudhi_library_2
     mkdir build
     cd build
