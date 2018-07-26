@@ -19,6 +19,10 @@ Based on the recipe "Singularity.Ubuntu16.04-Basic" by drinkingkazu. Can be foun
 https://github.com/DeepLearnPhysics/larcv2-singularity
     -All packages are installed using pip3 for compatibility with Python3.
 
+%files
+project-config.jam /tmp/project-config.jam
+build.sh /tmp/build.sh
+
 %labels
 Maintainer jhamer90811
 Version 7/25/18
@@ -34,6 +38,7 @@ Version 7/25/18
     export PATH=${ROOTSYS}/bin:${PATH}
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
+    export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
     # apt-get
@@ -67,18 +72,16 @@ Version 7/25/18
 
     # install boost
 
-    wget -O boost_1_55_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
-    mkdir boost_1_55_0
-    tar xzvf boost_1_55_0.tar.gz
-    rm boost_1_55_0.tar.gz
-    cd boost_1_55_0
     apt-get -y update
-    apt-get -y install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
-    ./bootstrap.sh --prefix=/usr/local
-    ./b2
-    sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf'
-    ./b2 install
-    ldconfig
+    apt-get -y install build-essential
+    apt-get -y install boost*  && \
+    apt-get -y remove  boost*
+    apt-get -y install icu libicu libicu-devel bzip2-devel texinfo zlib zlib-devel zlib-static openmpi openmpi-devel mpich-devel
+
+    mkdir /tmp/boost
+    /tmp/build.sh
+
+
 
     # install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
