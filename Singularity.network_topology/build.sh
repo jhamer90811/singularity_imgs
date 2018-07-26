@@ -23,7 +23,7 @@ b2_options+=" -j8"
 sf_url="http://sourceforge.net/projects/boost/files/boost/"
 dl_url="${sf_url}${BOOST_MAJ_VERSION}.${BOOST_MIN_VERSION}.${BOOST_REL_VERSION}/boost_${BOOST_MAJ_VERSION}_${BOOST_MIN_VERSION}_${BOOST_REL_VERSION}.tar.bz2/download"
 # Build temporary dir, where the sources are extracted
-tmp_dir="/tmp/boost/boost_${BOOST_MAJ_VERSION}_${BOOST_MIN_VERSION}_${BOOST_REL_VERSION}/"
+tmp_dir="/usr/local/root/boost/boost_${BOOST_MAJ_VERSION}_${BOOST_MIN_VERSION}_${BOOST_REL_VERSION}/"
 
 
 rm /usr/local/root/tmp/boost/stdout.log 2>/dev/null
@@ -39,7 +39,7 @@ tar -xvjf download                      && \
 cd $tmp_dir                             && \
 echo "Starting Bootstrap"               && \
 ./bootstrap.sh $bootstrap_options       && \
-cp -f /usr/local/root/tmp/project-config.jam $tmp_dir  &&\
+cp -f /usr/local/root/project-config.jam $tmp_dir  &&\
 echo "Starting Compilation"                            &&\
 ./b2 install $b2_options                               &&\
 echo "All done"
