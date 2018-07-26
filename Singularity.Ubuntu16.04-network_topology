@@ -65,6 +65,20 @@ Version 7/25/18
     pip3 --no-cache-dir --disable-pip-version-check install 'ipython<6.0'
     pip3 --no-cache-dir --disable-pip-version-check install jupyter notebook
 
+    # install boost
+
+    wget -O boost_1_55_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
+    tar xzvf boost_1_55_0.tar.gz
+    rm boost_1_55_0.tar.gz
+    cd boost_1_55_0/
+    apt-get update
+    apt-get install build-essential autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
+    ./bootstrap.sh --prefix=/usr/local
+    ./b2
+    sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf'
+    ./b2 install
+    ldconfig
+
     # install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
     unzip library-latest.zip
