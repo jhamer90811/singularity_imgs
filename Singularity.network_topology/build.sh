@@ -5,12 +5,13 @@ BOOST_MIN_VERSION=64
 BOOST_REL_VERSION=0
 
 bootstrap_options=""
+bootstrap_options+="--prefix=/usr/local"
 bootstrap_options+=" --with-python-version=3.5"
 bootstrap_options+=" --with-python=/usr/bin/python3.5"
 bootstrap_options+=" --with-icu"
 
 b2_options=""
-b2_options+=" --prefix=/usr/local"
+#b2_options+=" --prefix=/usr/local"
 b2_options+=" -a"
 b2_options+=" -j8"
 
