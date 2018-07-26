@@ -41,8 +41,6 @@ Version 7/25/18
     export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
-    #chmod +x /tmp/build.sh
-    #chmod +x /tmp/project-config.jam
 
     # apt-get
     apt-get -y update
@@ -85,6 +83,8 @@ Version 7/25/18
     apt-get -y remove  boost*
     # apt-get -y install icu libicu libicu-devel bzip2-devel texinfo zlib zlib-devel zlib-static openmpi openmpi-devel mpich-devel
 
+    chmod +x $ROOTSYS/tmp/build.sh
+    chmod +x $ROOTSYS/tmp/project-config.jam
     mkdir $ROOTSYS/tmp/boost
     $ROOTSYS/tmp/build.sh
 
