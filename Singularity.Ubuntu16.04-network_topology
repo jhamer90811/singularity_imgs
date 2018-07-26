@@ -68,7 +68,8 @@ Version 7/25/18
     # install boost
 
     wget -O boost_1_55_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
-    tar xzvf boost_1_55_0.tar.gz
+    mkdir boost_1_55_0
+    tar xzvf boost_1_55_0.tar.gz -C boost_1_55_0
     rm boost_1_55_0.tar.gz
     cd boost_1_55_0/
     apt-get -y update
