@@ -78,28 +78,28 @@ Version 7/25/18
 
     apt-get -y update
     apt-get -y install build-essential
-    apt-get -y install boost*  && \
-    apt-get -y remove  boost*
+    #apt-get -y install boost*  && \
+    #apt-get -y remove  boost*
     apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-dev
 
-    chmod +x $ROOTSYS/tmp/build.sh
-    chmod +x $ROOTSYS/tmp/project-config.jam
-    mkdir $ROOTSYS/tmp/boost
-    $ROOTSYS/tmp/build.sh
+    #chmod +x $ROOTSYS/tmp/build.sh
+    #chmod +x $ROOTSYS/tmp/project-config.jam
+    #mkdir $ROOTSYS/tmp/boost
+    #$ROOTSYS/tmp/build.sh
 
-#
+    ls /usr/bin
 
     # install GUDHI
-    wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
-    unzip library-latest.zip
-    rm library-latest.zip
-    rm version.2.2.0.txt
-    tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
-    cd library-gudhi_library_2
-    mkdir build
-    cd build
-    cmake -DPython_ADDITIONAL_VERSIONS=3 ..
-    make cython
+    #wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
+    #unzip library-latest.zip
+    #rm library-latest.zip
+    #rm version.2.2.0.txt
+    #tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    #rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    #mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
+    #cd library-gudhi_library_2
+    #mkdir build
+    #cd build
+    #cmake -DPython_ADDITIONAL_VERSIONS=3 ..
+    #make cython
 
