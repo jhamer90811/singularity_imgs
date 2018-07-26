@@ -44,7 +44,7 @@ Version 7/25/18
 
     # apt-get
     apt-get -y update
-    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python3 python3-dev python3-tk python3-pip git wget emacs vim unzip
+    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python3 python3-dev python3-tk python3-pip git wget emacs vim unzip pkg-config
 
     # asciinema
     apt-get -y install software-properties-common python-software-properties
@@ -78,28 +78,28 @@ Version 7/25/18
 
     apt-get -y update
     apt-get -y install build-essential
-    #apt-get -y install boost*  && \
-    #apt-get -y remove  boost*
+    apt-get -y install boost*  && \
+    apt-get -y remove  boost*
     apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-dev
 
-    #chmod +x $ROOTSYS/tmp/build.sh
-    #chmod +x $ROOTSYS/tmp/project-config.jam
-    #mkdir $ROOTSYS/tmp/boost
-    #$ROOTSYS/tmp/build.sh
+    pkg-config --cflags python3
 
-    ls /usr/bin
+    chmod +x $ROOTSYS/tmp/build.sh
+    chmod +x $ROOTSYS/tmp/project-config.jam
+    mkdir $ROOTSYS/tmp/boost
+    $ROOTSYS/tmp/build.sh
 
-    # install GUDHI
-    #wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
-    #unzip library-latest.zip
-    #rm library-latest.zip
-    #rm version.2.2.0.txt
-    #tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    #rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    #mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
-    #cd library-gudhi_library_2
-    #mkdir build
-    #cd build
-    #cmake -DPython_ADDITIONAL_VERSIONS=3 ..
-    #make cython
+    install GUDHI
+    wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
+    unzip library-latest.zip
+    rm library-latest.zip
+    rm version.2.2.0.txt
+    tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
+    mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
+    cd library-gudhi_library_2
+    mkdir build
+    cd build
+    cmake -DPython_ADDITIONAL_VERSIONS=3 ..
+    make cython
 
