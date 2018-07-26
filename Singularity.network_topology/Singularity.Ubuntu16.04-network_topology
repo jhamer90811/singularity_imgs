@@ -80,7 +80,7 @@ Version 7/25/18
     apt-get -y install build-essential
     apt-get -y install boost*  && \
     apt-get -y remove  boost*
-    apt-get -y install icu libicu libicu-dev bzip2-dev texinfo zlib1g zlib-dev zlib-static openmpi-bin openmpi-doc libopenmpi-dev mpich mpich-dev
+    apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich
 
     chmod +x $ROOTSYS/tmp/build.sh
     chmod +x $ROOTSYS/tmp/project-config.jam
