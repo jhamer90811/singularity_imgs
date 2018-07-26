@@ -18,9 +18,9 @@ project : default-build <toolset>gcc ;
 
 using python
     : 3.5  # version
-    : /usr  # cmd-or-prefix
+    : /usr/bin/python3  # cmd-or-prefix
     : /usr/include/python3.5m #includes
-    : #libraries
+    : /usr/lib #libraries
     : #condition
 ;
 
