@@ -42,4 +42,5 @@ option.set libdir : /usr/local/lib ;
 option.set includedir : /usr/local/include ;
 
 # Stop on first error
-option.set keep-going : false ;
+option.set keep-going : true ;
+#Changed from false to true
