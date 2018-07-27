@@ -26,7 +26,6 @@ using python
 
 using mpi ;
 using zlib ;
-using bzip2 ;
 
 # List of --with-<library> and --without-<library>
 # options. If left empty, all libraries will be built.
@@ -42,5 +41,4 @@ option.set libdir : /usr/local/lib ;
 option.set includedir : /usr/local/include ;
 
 # Stop on first error
-option.set keep-going : true ;
-#Changed from false to true
+option.set keep-going : false ;

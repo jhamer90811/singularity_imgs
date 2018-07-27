@@ -11,9 +11,9 @@ bootstrap_options+=" --with-python=/usr/bin/python3.5"
 bootstrap_options+=" --with-icu"
 
 b2_options=""
-#b2_options+=" --prefix=/usr/local"
-#b2_options+=" -a"
-#b2_options+=" -j8"
+b2_options+=" --prefix=/usr/local"
+b2_options+=" -a"
+b2_options+=" -j8"
 
 
 
