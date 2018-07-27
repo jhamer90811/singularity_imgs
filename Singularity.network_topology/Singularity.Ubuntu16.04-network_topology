@@ -64,7 +64,7 @@ Version 7/25/18
     #mv /tmp/project-config.jam $ROOTSYS/tmp/project-config.jam
     export PATH=${ROOTSYS}/bin:${PATH}
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
-    export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
+    export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
     echo $LD_LIBRARY_PATH
