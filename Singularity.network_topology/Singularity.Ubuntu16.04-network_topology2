@@ -41,6 +41,7 @@ Version 7/25/18
     export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
+    mkdir /scratch /data
 
     # apt-get
     apt-get -y update
@@ -84,7 +85,7 @@ Version 7/25/18
     apt-get -y install build-essential
     apt-get -y install boost*  && \
     apt-get -y remove  boost*
-    apt-get -y install libicu-dev build-essential libbz2-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich autotools-dev libcgal-dev
+    apt-get -y install libicu-dev build-essential libbz2-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich autotools-dev
     apt-get -y install libboost-all-dev
 
     #chmod +x /tmp/build.sh
@@ -92,6 +93,8 @@ Version 7/25/18
     #mkdir /tmp/boost
     #/tmp/build.sh
     #ldconfig
+
+    apt-get -y install libcgal-dev
 
     #install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
