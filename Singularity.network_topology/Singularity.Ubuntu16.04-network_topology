@@ -85,7 +85,7 @@ Version 7/25/18
     apt-get -y install boost*  && \
     apt-get -y remove  boost*
     apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich
-    apt-get -y install libboost-all-dev=1.64.0.1ubuntu1
+    apt-get -y install libboost-all-dev
 
     chmod +x /tmp/build.sh
     chmod +x /tmp/project-config.jam
