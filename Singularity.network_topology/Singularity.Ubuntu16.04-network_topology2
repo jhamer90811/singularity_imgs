@@ -42,7 +42,7 @@ Version 7/25/18
 
 %post
     mkdir /scratch /data
-
+    #
     # apt-get
     apt-get -y update
     apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python3-dev python3-tk python3-pip git wget emacs vim unzip pkg-config
