@@ -12,8 +12,8 @@ bootstrap_options+=" --with-icu"
 
 b2_options=""
 #b2_options+=" --prefix=/usr/local"
-b2_options+=" -a"
-b2_options+=" -j8"
+#b2_options+=" -a"
+#b2_options+=" -j8"
 
 
 
@@ -27,8 +27,8 @@ dl_url="${sf_url}${BOOST_MAJ_VERSION}.${BOOST_MIN_VERSION}.${BOOST_REL_VERSION}/
 tmp_dir="/tmp/boost/boost_${BOOST_MAJ_VERSION}_${BOOST_MIN_VERSION}_${BOOST_REL_VERSION}/"
 
 
-rm /tmp/boost/stdout.log 2>/dev/null
-rm //tmp/boost/stderr.log 2>/dev/null
+#rm /tmp/boost/stdout.log 2>/dev/null
+#rm /tmp/boost/stderr.log 2>/dev/null
 
 # Overwrite the boost configuration file,
 # because python paths are not filled in otherwise
