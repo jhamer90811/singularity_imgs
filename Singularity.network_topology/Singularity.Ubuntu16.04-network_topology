@@ -67,21 +67,25 @@ Version 7/25/18
     export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
+    echo $LD_LIBRARY_PATH
+    echo $HOME
+
     # pip basics
     pip3 --no-cache-dir --disable-pip-version-check install --upgrade setuptools
-    pip3 --no-cache-dir --disable-pip-version-check install numpy wheel zmq six pygments pyyaml cython gputil psutil humanize h5py tqdm scipy seaborn tables google cmake
+    pip3 --no-cache-dir --disable-pip-version-check install numpy wheel zmq six pygments pyyaml cython gputil psutil humanize h5py tqdm scipy seaborn tables google cmake mpi4py
     pip3 --no-cache-dir --disable-pip-version-check install root_numpy
     pip3 --no-cache-dir --disable-pip-version-check install matplotlib pandas scikit-image scikit-learn Pillow opencv-python
     pip3 --no-cache-dir --disable-pip-version-check install 'ipython<6.0'
     pip3 --no-cache-dir --disable-pip-version-check install jupyter notebook
 
     # install boost
+    pkg-config --
 
     apt-get -y update
     apt-get -y install build-essential
     apt-get -y install boost*  && \
     apt-get -y remove  boost*
-    apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-dev
+    apt-get -y install libicu-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich libboost-all-dev=1.64.0.1ubuntu1
 
     chmod +x /tmp/build.sh
     chmod +x /tmp/project-config.jam
