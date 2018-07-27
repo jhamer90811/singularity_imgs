@@ -84,7 +84,7 @@ Version 7/25/18
     apt-get -y install build-essential
     apt-get -y install boost*  && \
     apt-get -y remove  boost*
-    apt-get -y install libicu-dev build-essential libbz2-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich autotools-dev
+    apt-get -y install libicu-dev build-essential libbz2-dev bzip2 texinfo zlib1g openmpi-bin openmpi-doc libopenmpi-dev mpich autotools-dev libcgal-dev
     apt-get -y install libboost-all-dev
 
     chmod +x /tmp/build.sh
