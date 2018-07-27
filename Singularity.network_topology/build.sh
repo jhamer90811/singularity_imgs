@@ -42,5 +42,7 @@ echo "Starting Bootstrap"               && \
 ./bootstrap.sh ${bootstrap_options}       && \
 cp -f /tmp/project-config.jam ${tmp_dir}  &&\
 echo "Starting Compilation"                            &&\
+./b2                                                    &&\
+echo "Starting Installation"                            &&\
 ./b2 install ${b2_options}                               &&\
 echo "All done"
