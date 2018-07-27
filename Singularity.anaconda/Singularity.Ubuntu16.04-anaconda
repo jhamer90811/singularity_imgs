@@ -17,10 +17,6 @@ Based on the recipe "Singularity.Ubuntu16.04-Basic" by drinkingkazu. Can be foun
 https://github.com/DeepLearnPhysics/larcv2-singularity
     -All packages are installed using pip3 for compatibility with Python3.
 
-%files
-project-config.jam /tmp/project-config.jam
-build.sh /tmp/build.sh
-
 %labels
 Maintainer jhamer90811
 Version 7/25/18
@@ -42,7 +38,7 @@ Version 7/25/18
 
     # apt-get
     apt-get -y update
-    apt-get -y install git wget emacs vim unzip pkg-config curl
+    apt-get -y install git wget emacs vim unzip pkg-config curl bash
 
     # asciinema
     apt-get -y install software-properties-common python-software-properties
@@ -67,7 +63,7 @@ Version 7/25/18
     cd /tmp
     curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
     chmod +x Anaconda3-5.2.0-Linux-x86_64.sh
-    Anaconda3-5.2.0-Linux-x86_64.sh -b
+    bash Anaconda3-5.2.0-Linux-x86_64.sh -b
     conda list
 
 
