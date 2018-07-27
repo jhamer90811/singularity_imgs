@@ -64,6 +64,7 @@ Version 7/25/18
     #mv /tmp/project-config.jam $ROOTSYS/tmp/project-config.jam
     export PATH=${ROOTSYS}/bin:${PATH}
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
+    export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
     # pip basics
@@ -86,6 +87,7 @@ Version 7/25/18
     chmod +x /tmp/project-config.jam
     mkdir /tmp/boost
     /tmp/build.sh
+    ldconfig
 
     install GUDHI
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
