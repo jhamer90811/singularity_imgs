@@ -46,7 +46,7 @@ Version 7/25/18
     # apt-get
     apt-get -y update
     apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python3-dev python3-tk python3-pip git wget emacs vim unzip pkg-config
-    apt-get -y install protobuf-compiler python3-protobuf
+    apt-get -y install protobuf-compiler
 
     # asciinema
     apt-get -y install software-properties-common python-software-properties
@@ -76,6 +76,7 @@ Version 7/25/18
     # pip basics
     pip3 --no-cache-dir --disable-pip-version-check install --upgrade setuptools
     pip3 --no-cache-dir --disable-pip-version-check install numpy wheel zmq six pygments pyyaml cython gputil psutil humanize h5py tqdm scipy seaborn tables google cmake
+    pip3 --no-cache-dir --disable-pip-version-check install python3-protobuf
     pip3 --no-cache-dir --disable-pip-version-check install root_numpy
     pip3 --no-cache-dir --disable-pip-version-check install matplotlib pandas scikit-image scikit-learn Pillow opencv-python
     pip3 --no-cache-dir --disable-pip-version-check install 'ipython<6.0'
