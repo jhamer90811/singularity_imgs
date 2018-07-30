@@ -113,5 +113,7 @@ Version 7/25/18
     cmake -DPython_ADDITIONAL_VERSIONS=3 ..
     make cython
 
+    pip3 install --upgrade python3-protobuf
+
     cp -r /library-gudhi_library_2 /usr/lib/python3.5/site-packages/gudhi
     cp -r /library-gudhi_library_2 /usr/local/lib/python3.5/dist-packages/gudhi
