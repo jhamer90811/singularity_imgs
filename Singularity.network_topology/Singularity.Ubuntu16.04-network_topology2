@@ -118,4 +118,4 @@ Version 7/25/18
     cp -r /library-gudhi_library_2 /usr/lib/python3.5/site-packages/gudhi
     cp -r /library-gudhi_library_2 /usr/local/lib/python3.5/dist-packages/gudhi
 
-    rm -rf /library-gudhi-library_2
+    rm -rf /library-gudhi_library_2
