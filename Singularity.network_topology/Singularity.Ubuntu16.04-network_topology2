@@ -100,14 +100,14 @@ Version 7/25/18
     apt-get -y install libcgal-dev libeigen3-dev libcgal-qt5-dev
 
     #install GUDHI
+    mkdir /gudhi
+    cd /gudhi
     wget https://gforge.inria.fr/frs/download.php/latestzip/5253/library-latest.zip
     unzip library-latest.zip
     rm library-latest.zip
-    rm version.2.2.0.txt
     tar -xf 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
     rm 2018-06-14-13-32-49_GUDHI_2.2.0.tar.gz
-    mv 2018-06-14-13-32-49_GUDHI_2.2.0 library-gudhi_library_2
-    cd library-gudhi_library_2
+    cd 2018-06-14-13-32-49_GUDHI_2.2.0
     mkdir build
     cd build
     cmake -DPython_ADDITIONAL_VERSIONS=3 ..
@@ -115,7 +115,9 @@ Version 7/25/18
 
     pip3 install --upgrade python3-protobuf
 
-    cp -r /library-gudhi_library_2 /usr/lib/python3.5/site-packages/gudhi
-    cp -r /library-gudhi_library_2 /usr/local/lib/python3.5/dist-packages/gudhi
+    cp -r /gudhi /usr/lib/python3.5/site-packages/gudhi
+    cp -r /gudhi /usr/local/lib/python3.5/dist-packages/gudhi
+    cp -r /gudhi /usr/lib/python3.5/gudhi
+    cp -r /gudhi /usr/lib/python3/dist-packages/gudhi
 
-    rm -rf /library-gudhi_library_2
+    rm -rf /gudhi
