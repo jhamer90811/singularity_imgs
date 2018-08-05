@@ -118,6 +118,9 @@ Version 7/25/18
     cp -r /gudhi /usr/lib/python3.5/site-packages/gudhi
     cp -r /gudhi /usr/local/lib/python3.5/dist-packages/gudhi
 
-    cp cython/gudhi.cypthon-35m-x86_64-linux-gnu.so /usr/lib/python3.5/lib-dynload
+    #cp cython/gudhi.cypthon-35m-x86_64-linux-gnu.so /usr/lib/python3.5/lib-dynload
+
+    pwd
+    ls
 
     rm -rf /gudhi
