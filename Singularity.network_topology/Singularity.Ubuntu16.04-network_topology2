@@ -121,6 +121,6 @@ Version 7/25/18
     #cp cython/gudhi.cypthon-35m-x86_64-linux-gnu.so /usr/lib/python3.5/lib-dynload
 
     pwd
-    ls
+    ls cython
 
     rm -rf /gudhi
