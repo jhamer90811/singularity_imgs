@@ -97,7 +97,20 @@ Version 7/25/18
     #/tmp/build.sh
     #ldconfig
 
-    apt-get -y install libcgal-dev libeigen3-dev libcgal-qt5-dev
+    #apt-get -y install libcgal-dev libeigen3-dev libcgal-qt5-dev
+
+    mkdir /CGAL_4_11_3
+    cd /CGAL_4_11_3
+    wget https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-4.11.3/CGAL-4.11.3.zip
+    unzip CGAL-4.11.3.zip
+    rm CGAL-4.11.3.zip
+    cd CGAL-4.11.3
+    cmake .
+    make
+
+
+
+    apt-get -y install libeigen3-dev
 
     #install GUDHI
     mkdir /gudhi
