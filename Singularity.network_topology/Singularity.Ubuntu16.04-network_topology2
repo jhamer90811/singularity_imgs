@@ -98,7 +98,7 @@ Version 7/25/18
     #ldconfig
 
     #apt-get -y install libcgal-dev libeigen3-dev libcgal-qt5-dev
-    apt-get -y install libgmp-dev libgmp10 libgmp10-dbgsym libgmp10-doc libgmp3-dev libgmpxx4ldbl libgmpxx4ldbl-dbgsym
+    apt-get -y install libgmp-dev libgmp10 libgmp10-doc libgmp3-dev libgmpxx4ldbl
 
     mkdir /CGAL_4_11_3
     cd /CGAL_4_11_3
