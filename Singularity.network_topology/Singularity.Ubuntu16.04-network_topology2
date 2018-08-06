@@ -113,6 +113,9 @@ Version 7/25/18
     cmake .
     make
 
+    export $CMAKE_MODULE_PATH=/CGAL_4_11/CGAL-4.11:${CMAKE_MODULE_PATH}
+    export $CGAL_DIR=/CGAL_4_11/CGAL-4.11
+
     #apt-get -y install  libcgal11v5 libcgal-dev libcgal-qt5-11 libcgal-qt5-dev libcgal-demo libcgal-ipelets
 
 
