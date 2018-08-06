@@ -101,16 +101,20 @@ Version 7/25/18
     apt-get -y install libgmp-dev libgmp10 libgmp10-doc libgmp3-dev libgmpxx4ldbl
     apt-get -y install libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg
 
-    #mkdir /CGAL_4_11_3
-    #cd /CGAL_4_11_3
-    #wget https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-4.11.3/CGAL-4.11.3.zip
-    #unzip CGAL-4.11.3.zip
-    #rm CGAL-4.11.3.zip
-    #cd CGAL-4.11.3
-    #cmake .
-    #make
+    apt-get -y build-dep cgal
+    apt-get -y install libqt5svg5-dev qtscript5-dev libqt5opengl5-dev
 
-    apt-get -y install  libcgal11v5 libcgal-dev libcgal-qt5-11 libcgal-qt5-dev libcgal-demo libcgal-ipelets
+    cd ~
+    mkdir CGAL_4_11
+    cd CGAL_4_11
+    wget https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-4.11/CGAL-4.11.zip
+    unzip CGAL-4.11.zip
+    rm CGAL-4.11.zip
+    cd CGAL-4.11
+    cmake .
+    make
+
+    #apt-get -y install  libcgal11v5 libcgal-dev libcgal-qt5-11 libcgal-qt5-dev libcgal-demo libcgal-ipelets
 
 
     apt-get -y install libeigen3-dev libeigen3-doc libmrpt-dev
