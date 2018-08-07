@@ -41,7 +41,7 @@ Version 7/25/18
     export PATH=/usr/lib64/openmpi/bin/:$PATH
 
 %post
-    mkdir /scratch /data
+    mkdir /scratch /data /lfstev
 
     # apt-get
     apt-get -y update
